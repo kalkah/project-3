@@ -156,14 +156,46 @@ The file calculations.sh was created with this command **`touch calculations.sh`
 The following code was written in the calculations.sh using the nano editor
 
 ```
+#!/bin/bash
+
+# Define two variables with numeric values
+num1=10
+num2=5
+
+# Perform basic arithmetic operations
+sum=$((num1 + num2))
+difference=$((num1 - num2))
+product=$((num1 * num2))
+quotient=$((num1 / num2))
+remainder=$((num1 % num2))
+
+# Display the results
+echo "Number 1: $num1"
+echo "Number 2: $num2"
+echo "Sum: $sum"
+echo "Difference: $difference"
+echo "Product: $product"
+echo "Quotient: $quotient"
+echo "Remainder: $remainder"
+
+# Perform some more complex calculations
+power_of_2=$((num1 ** 2))
+square_root=$(awk "BEGIN{ n=$num2; print sqrt(n) }")
+
+# Display the results
+echo "Number 1 raised to the power of 2: $power_of_2"
+echo "Square root of number 2: $square_root"
 
 ```
 
-Executable permission was set on the sort.sh using the command below:
+Executable permission was set on the calculations.sh using the command below:
 
 **`sudo chmod +x calculations.sh`**
 
-The script was run using **`./calculations.sh`**
+The script was run using **`./calculations.sh`** command
+
+<img width="374" alt="image" src="https://github.com/kalkah/project-3/assets/95209274/46bab60c-7f64-42ae-be58-935784ad2beb">
+
 
 ## File Backup and Timestamping
 
@@ -200,7 +232,7 @@ Executable permission was set on the sort.sh using the command below:
 
 **`sudo chmod +x backup.sh`**
 
-The script was run using **`./backup.sh`**
+The script was run using **`./backup.sh`** command
 
 <img width="523" alt="image" src="https://github.com/kalkah/project-3/assets/95209274/c2945ba4-c763-497e-9509-8e95391d275f">
 
